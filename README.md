@@ -8,7 +8,7 @@ Print **borderless 4x6, 5x7, 3.5x5, 5x5 and 8x10 photos** on Canon PIXMA / MegaT
 - **"Paper size is different" / paper setting mismatch** errors → see the note at the end.
 
 ```sh
-swiftc -O fotos.swift -o ~/.local/bin/fotos
+curl -fsSL https://raw.githubusercontent.com/BrendaOrtega/canon-pixma-borderless-photo-print-macos/main/install.sh | bash
 fotos --preview *.jpg          # contact sheet, no printing
 fotos --size 4x6 --paper glossy2 *.jpg
 ```
@@ -33,11 +33,18 @@ CLI para macOS que imprime fotos en tamaño estándar (4x6, 5x7, 3.5x5, 5x5, 8x1
 
 ## Instalar
 
-Requiere macOS 12+ y las herramientas de línea de comandos de Xcode (`swiftc`).
+Pega esto en la Terminal (macOS 12+, Intel o Apple Silicon, no requiere Xcode):
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/BrendaOrtega/canon-pixma-borderless-photo-print-macos/main/install.sh | bash
+```
+
+<details><summary>Compilar desde el código (Swift)</summary>
 
 ```sh
 swiftc -O fotos.swift -o ~/.local/bin/fotos
 ```
+</details>
 
 ## Uso
 
