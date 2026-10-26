@@ -1,4 +1,22 @@
-# fotos
+# Canon PIXMA borderless photo printing for macOS
+
+Print **borderless 4x6, 5x7, 3.5x5, 5x5 and 8x10 photos** on Canon PIXMA / MegaTank printers (tested on the **Canon G500**) from a Mac over **AirPrint** — no Canon driver needed (Canon doesn't ship a macOS driver for the G500).
+
+**Fixes common problems when printing phone photos on a Canon from a Mac:**
+- **Blank pages** when sending JPEGs with `fit-to-page` over AirPrint → sends an exact-size PDF instead.
+- **Heads cut off** when cropping tall phone photos (9:20) to 4x6 (2:3) → face/person-aware smart crop with Apple's Vision framework.
+- **"Paper size is different" / paper setting mismatch** errors → see the note at the end.
+
+```sh
+swiftc -O fotos.swift -o ~/.local/bin/fotos
+fotos --preview *.jpg          # contact sheet, no printing
+fotos --size 4x6 --paper glossy2 *.jpg
+```
+
+---
+
+## Español
+
 
 CLI para macOS que imprime fotos en tamaño estándar (4x6, 5x7, 3.5x5, 5x5, 8x10) **sin bordes**, pensado para impresoras Canon PIXMA vía AirPrint (probado con la Canon G500).
 
