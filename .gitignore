@@ -1,0 +1,6 @@
+fotos
+*.pdf
+*.png
+*.jpg
+*.jpeg
+.DS_Store
